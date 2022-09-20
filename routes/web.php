@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\QrCodeController;
+//use App\Http\Controllers\QrCodeController;
 
 
 
@@ -26,4 +26,4 @@ Route::get('/file-import',[UserController::class,'importView'])->name('import-vi
 Route::post('/import',[UserController::class,'import'])->name('import');
 Route::get('/export-users',[UserController::class,'exportUsers'])->name('export-users');
 
-Route::get('/qrcode', [QrCodeController::class, 'index']);
+//Route::get('/qrcode', [QrCodeController::class, 'index']);
