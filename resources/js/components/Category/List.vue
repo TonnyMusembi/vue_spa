@@ -62,7 +62,6 @@
         </div>
     </div>
 </template>
-
 <script>
 export default {
     name: "categories",
@@ -79,7 +78,7 @@ export default {
             await this.axios
                 .get("/api/category")
                 .then((response) => {
-                    console.log(response.data.data)
+                    console.log(response.data.data);
                     this.categories = response.data;
                 })
                 .catch((error) => {
