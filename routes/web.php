@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\QrCodeController;
+
 
 
 /*
@@ -23,3 +25,5 @@ Route::get('{any}', function () {
 Route::get('/file-import',[UserController::class,'importView'])->name('import-view');
 Route::post('/import',[UserController::class,'import'])->name('import');
 Route::get('/export-users',[UserController::class,'exportUsers'])->name('export-users');
+
+Route::get('/qrcode', [QrCodeController::class, 'index']);
