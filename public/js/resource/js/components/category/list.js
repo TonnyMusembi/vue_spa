@@ -40,6 +40,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 0:
                 _context.next = 2;
                 return _this.axios.get("/api/category").then(function (response) {
+                  console.log(response.data.data);
                   _this.categories = response.data;
                 })["catch"](function (error) {
                   console.log(error);

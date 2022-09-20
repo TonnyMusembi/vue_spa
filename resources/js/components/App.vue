@@ -1,5 +1,5 @@
 <template>
-    <main>
+    <div>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
                 <router-link to="/" class="navbar-brand" href="#"
@@ -9,7 +9,7 @@
                     <div class="navbar-nav">
                         <router-link
                             exact-active-class="active"
-                            to="/list"
+                            to="/List"
                             class="nav-item nav-link"
                             >Home</router-link
                         >
@@ -26,9 +26,10 @@
         <div class="container mt-5">
             <router-view></router-view>
         </div>
-    </main>
+    </div>
 </template>
 
 <script>
-export default {};
+export default {
+};
 </script>
