@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CountryController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
@@ -38,3 +39,5 @@ Route::post('posts', [PostController::class,'store']); // Create Post
 Route::get('posts/{id}', [PostController::class,'show']); // Detail of Post
 Route::put('posts/{id}', [PostController::class,'update']); // Update Post
 Route::delete('posts/{id}', [PostController::class,'destroy']);
+
+Route::get('countries',[CountryController::class]);
