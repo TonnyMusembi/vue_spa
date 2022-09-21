@@ -40,7 +40,6 @@ class PostController extends Controller
     public function store(Request $request)
     {
         //
-
        return response()->json('$data');
     }
 

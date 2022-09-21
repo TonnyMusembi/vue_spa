@@ -84,5 +84,8 @@ class ProductController extends Controller
     public function destroy(Product $product)
     {
         //
+        $product=Product::all();
+        return response()->json($product);
     }
+
 }

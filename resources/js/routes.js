@@ -1,18 +1,18 @@
 const Welcome = () =>
     import (
-        "./components/Welcome.vue" /* webpackChunkName: "resource/js/components/welcome" */
+        "./components/Welcome.vue"
     );
 const CategoryList = () =>
     import (
-        "./components/category/List.vue" /* webpackChunkName: "resource/js/components/category/list" */
+        "./components/category/List.vue"
     );
 const CategoryCreate = () =>
     import (
-        "./components/category/Add.vue" /* webpackChunkName: "resource/js/components/category/add" */
+        "./components/category/Add.vue"
     );
 const CategoryEdit = () =>
     import (
-        "./components/category/Edit.vue" /* webpackChunkName: "resource/js/components/category/edit" */
+        "./components/category/Edit.vue"
     );
 
 export const routes = [{

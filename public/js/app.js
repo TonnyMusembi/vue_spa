@@ -19945,19 +19945,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "routes": () => (/* binding */ routes)
 /* harmony export */ });
 var Welcome = function Welcome() {
-  return __webpack_require__.e(/*! import() | resource/js/components/welcome */ "resource/js/components/welcome").then(__webpack_require__.bind(__webpack_require__, /*! ./components/Welcome.vue */ "./resources/js/components/Welcome.vue"));
+  return __webpack_require__.e(/*! import() */ "resources_js_components_Welcome_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/Welcome.vue */ "./resources/js/components/Welcome.vue"));
 };
 
 var CategoryList = function CategoryList() {
-  return __webpack_require__.e(/*! import() | resource/js/components/category/list */ "resource/js/components/category/list").then(__webpack_require__.bind(__webpack_require__, /*! ./components/category/List.vue */ "./resources/js/components/category/List.vue"));
+  return __webpack_require__.e(/*! import() */ "resources_js_components_category_List_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/category/List.vue */ "./resources/js/components/category/List.vue"));
 };
 
 var CategoryCreate = function CategoryCreate() {
-  return __webpack_require__.e(/*! import() | resource/js/components/category/add */ "resource/js/components/category/add").then(__webpack_require__.bind(__webpack_require__, /*! ./components/category/Add.vue */ "./resources/js/components/category/Add.vue"));
+  return __webpack_require__.e(/*! import() */ "resources_js_components_category_Add_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/category/Add.vue */ "./resources/js/components/category/Add.vue"));
 };
 
 var CategoryEdit = function CategoryEdit() {
-  return __webpack_require__.e(/*! import() | resource/js/components/category/edit */ "resource/js/components/category/edit").then(__webpack_require__.bind(__webpack_require__, /*! ./components/category/Edit.vue */ "./resources/js/components/category/Edit.vue"));
+  return __webpack_require__.e(/*! import() */ "resources_js_components_category_Edit_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/category/Edit.vue */ "./resources/js/components/category/Edit.vue"));
 };
 
 var routes = [{
@@ -41485,7 +41485,7 @@ module.exports = JSON.parse('{"_from":"axios@^0.21","_id":"axios@0.21.4","_inBun
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resource/js/components/welcome":1,"resource/js/components/category/list":1,"resource/js/components/category/add":1,"resource/js/components/category/edit":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_components_Welcome_vue":1,"resources_js_components_category_List_vue":1,"resources_js_components_category_Add_vue":1,"resources_js_components_category_Edit_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};
