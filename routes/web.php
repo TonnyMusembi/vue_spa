@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 //use App\Http\Controllers\QrCodeController;
@@ -32,3 +33,8 @@ Route::get('send-email-queue', function(){
     dispatch(new App\Jobs\TestEmailJob($details));
     return response()->json(['message'=>'Mail Send Successfully!!']);
 });
+Route::get('posts', [PostController::class,'index']); // List Posts
+Route::post('posts', [PostController::class,'store']); // Create Post
+Route::get('posts/{id}', [PostController::class,'show']); // Detail of Post
+Route::put('posts/{id}', [PostController::class,'update']); // Update Post
+Route::delete('posts/{id}', [PostController::class,'destroy']);
