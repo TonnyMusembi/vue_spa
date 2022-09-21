@@ -27,8 +27,7 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
+    public function create(){
         //
     }
 
@@ -41,6 +40,7 @@ class PostController extends Controller
     public function store(Request $request)
     {
         //
+       return response()->json('$data');
     }
 
     /**
