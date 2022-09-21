@@ -15,6 +15,8 @@ class CountryController extends Controller
     public function index()
     {
         //
+        $countries = Country::all();
+        return response()->json($countries);
     }
 
     /**
@@ -36,6 +38,7 @@ class CountryController extends Controller
     public function store(Request $request)
     {
         //
+        return response()->json('');
     }
 
     /**

@@ -18,5 +18,11 @@ class UserController extends Controller
 
 
     }
+    public function create(){
+
+    }
+    public function show(){
+        
+    }
 
 }

@@ -41,3 +41,4 @@ Route::put('posts/{id}', [PostController::class,'update']); // Update Post
 Route::delete('posts/{id}', [PostController::class,'destroy']);
 
 Route::get('countries',[CountryController::class]);
+Route::post('countries',[CountryController::class]);
