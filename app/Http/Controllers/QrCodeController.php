@@ -8,12 +8,17 @@ class QrCodeController extends Controller
 {
 
     public function index(){
+
     return view('qrcode');
 
 
     }
     public function store(Request $request){
         return response()->json();
+
+    }
+    public function create(){
+        
 
 
     }
