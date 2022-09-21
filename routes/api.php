@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\QrCodeController;
+use App\Http\Controllers\API\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +22,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::resource('category',App\Http\Controllers\CategoryController::class)->only(['index','store','show','update','destroy']);
 Route::get('/qrcode', [QrCodeController::class, 'index']);
+
+Route::get('/users',[UserController::class,'index']);

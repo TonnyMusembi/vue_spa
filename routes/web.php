@@ -27,3 +27,8 @@ Route::post('/import',[UserController::class,'import'])->name('import');
 Route::get('/export-users',[UserController::class,'exportUsers'])->name('export-users');
 
 //Route::get('/qrcode', [QrCodeController::class, 'index']);
+Route::get('send-email-queue', function(){
+    $details['email'] = '<EMAIL ADDRESS>';
+    dispatch(new App\Jobs\TestEmailJob($details));
+    return response()->json(['message'=>'Mail Send Successfully!!']);
+});
