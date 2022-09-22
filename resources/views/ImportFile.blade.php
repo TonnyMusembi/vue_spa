@@ -4,14 +4,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Laravel 9 Import Export Excel & CSV File - TechvBlogs</title>
+    <title>Export Csv</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 </head>
 
 <body>
     <div class="container mt-5 text-center">
         <h2 class="mb-4">
-            Laravel 9 Import Export Excel & CSV File - <a href="https://techvblogs.com/blog/laravel-9-import-export-excel-csv-file" target="_blank">TechvBlogs</a>
+            Import Csv<a href="https://techvblogs.com/blog/laravel-9-import-export-excel-csv-file" target="_blank">Tonny Tech</a>
         </h2>
         <form action="{{ route('import') }}" method="POST" enctype="multipart/form-data">
             @csrf

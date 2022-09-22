@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 //use App\Http\Controllers\QrCodeController;
 
+use App\Http\Controllers\JointableController;
 
 
 /*
@@ -19,10 +20,13 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::get('{any}', function () {
-    return view('app');
-})->where('any', '.*');
+// Route::get('{any}', function () {
+//     return view('app');
+// })->where('any', '.*');
 
+Route::get('/', function () {
+    return view('welcome');
+});
 
 Route::get('/file-import',[UserController::class,'importView'])->name('import-view');
 Route::post('/import',[UserController::class,'import'])->name('import');
@@ -42,3 +46,6 @@ Route::delete('posts/{id}', [PostController::class,'destroy']);
 
 Route::get('countries',[CountryController::class]);
 Route::post('countries',[CountryController::class]);
+
+
+Route::get('join_table', [JointableController::class, 'index']);
