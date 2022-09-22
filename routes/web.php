@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\API\ProgramController;
 use App\Http\Controllers\CountryController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
@@ -49,3 +50,5 @@ Route::post('countries',[CountryController::class]);
 
 
 Route::get('join_table', [JointableController::class, 'index']);
+
+Route::resource('api/programs',  App\Http\Controllers\API\ProgramController::class);
