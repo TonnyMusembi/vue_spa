@@ -5,7 +5,17 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     </head>
     <body>
-        <div class="container">
+          <div class="container mt-5 text-center">
+            <div class="cardbody">
+            </div>
+
+<form action="{{route('import-view')}}">
+
+<button class="btn btn-primary ">Users</button>
+
+</form>
+        </div>
+        <div class="container mt-auto" >
             <br />
             <h1 class="text-center text-primary">Sql Table Joins</h1>
             <br />
@@ -30,9 +40,10 @@
                 </table>
             </div>
         </div>
+    <input type="button" id="btn" value="Call API" />
+
     </body>
 </html>
 <script>
 
-    
 </script>

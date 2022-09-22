@@ -25,6 +25,16 @@
             <a class="btn btn-success" href="{{ route('export-users') }}">Export Users</a>
         </form>
     </div>
+    <div class="container mt-5 text-center">
+            <div class="cardbody">
+            </div>
+
+<form action="{{route('export-users')}}">
+
+<button class="btn btn-primary ">Users</button>
+
+</form>
+        </div>
 </body>
 
 </html>
