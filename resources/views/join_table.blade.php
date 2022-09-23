@@ -14,7 +14,9 @@
         </div>
         <div class="container mt-auto" >
             <br />
-            <h1 class="text-center text-primary">Users</h1>
+            <h1 class="text-center text-primary">Users
+                
+            </h1>
             <br />
             <div class="table-responsive">
                 <table class="table table-bordered table-striped">

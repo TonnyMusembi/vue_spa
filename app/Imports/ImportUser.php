@@ -21,4 +21,3 @@ class ImportUser implements ToModel
         ]);
     }
 }
-
