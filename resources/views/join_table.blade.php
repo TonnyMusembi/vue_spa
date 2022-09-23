@@ -8,16 +8,13 @@
           <div class="container mt-5 text-center">
             <div class="cardbody">
             </div>
-
 <form action="{{route('import-view')}}">
-
 <button class="btn btn-primary ">Users</button>
-
 </form>
         </div>
         <div class="container mt-auto" >
             <br />
-            <h1 class="text-center text-primary">Sql Table Joins</h1>
+            <h1 class="text-center text-primary">Users</h1>
             <br />
             <div class="table-responsive">
                 <table class="table table-bordered table-striped">
@@ -40,8 +37,9 @@
                 </table>
             </div>
         </div>
+        <div class=" mt-5 text-center">
     <input type="button" id="btn" value="Call API" />
-
+    </div>
     </body>
 </html>
 <script>

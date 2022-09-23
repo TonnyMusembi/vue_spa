@@ -32,9 +32,8 @@
 <form action="{{route('export-users')}}">
 
 <button class="btn btn-primary ">Users</button>
-
 </form>
-        </div>
+ </div>
 </body>
 
 </html>
