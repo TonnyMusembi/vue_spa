@@ -4,6 +4,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\QrCodeController;
 use App\Http\Controllers\API\UserController;
+use App\Http\Controllers\BookController;
+use App\Http\Controllers\RatingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +26,7 @@ Route::resource('category',App\Http\Controllers\CategoryController::class)->only
 Route::get('/qrcode', [QrCodeController::class, 'index']);
 
 Route::get('/users',[UserController::class,'index']);
+
+
+Route::get('books', [BookController::class]);
+Route::post('books/{book}/ratings', [RatingController::class]);
