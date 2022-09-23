@@ -8,7 +8,7 @@ use App\Http\Controllers\UserController;
 //use App\Http\Controllers\QrCodeController;
 
 use App\Http\Controllers\JointableController;
-
+use App\Http\Controllers\OrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,3 +52,4 @@ Route::post('countries',[CountryController::class]);
 Route::get('join_table', [JointableController::class, 'index']);
 
 Route::resource('api/programs',  App\Http\Controllers\API\ProgramController::class);
+Route::get('api/orders',[OrderController::class]);

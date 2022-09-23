@@ -15,7 +15,10 @@ class OrderController extends Controller
     public function index()
     {
         //
-    }
+          $orders = Order::all();
+     return response()->json([
+      'posts' => $orders
+   ],200);}
 
     /**
      * Show the form for creating a new resource.
