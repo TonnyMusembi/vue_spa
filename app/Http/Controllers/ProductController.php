@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\Program;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -36,8 +37,10 @@ class ProductController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request){
-        return response()->json();
-        //
+        $program = Program::create([
+
+        ]);
+        return response()->json($program);
 
     }
 
