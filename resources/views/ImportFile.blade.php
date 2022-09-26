@@ -48,7 +48,6 @@
 </body>
 </html>
 <script>
-    import axios from "axios";
 
 
     const list = [1,2,23,3]
@@ -64,6 +63,12 @@
     .catch((err) => {
         console.log(err)
     })
+
+    const  year =  new Date();
+     document.write("Year value :"+year.getFullYear());
+
+     const timeNow = new Date ();
+     console.log(timeNow);
 
 //     const options = {
 //   method: 'GET',

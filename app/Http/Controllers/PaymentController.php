@@ -14,8 +14,9 @@ class PaymentController extends Controller
      */
     public function index()
     {
-        
-        return view('');
+        $payments = Payment::all();
+        return response()->json($payments);
+
 
     }
 
@@ -27,6 +28,8 @@ class PaymentController extends Controller
     public function create()
     {
         //
+
+        return response()->json();
     }
 
     /**
