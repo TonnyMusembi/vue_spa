@@ -11,7 +11,7 @@
 <body>
     <div class="container mt-5 text-center">
         <h2 class="mb-4">
-            Import Csv<a href="https://techvblogs.com/blog/laravel-9-import-export-excel-csv-file" target="_blank">Tonny Tech</a>
+            Import Csv<a href="" target="_blank">Tonny Tech</a>
         </h2>
         <form action="{{ route('import') }}" method="POST" enctype="multipart/form-data">
             @csrf
@@ -34,9 +34,33 @@
 <button class="btn btn-primary ">Users</button>
 </form>
  </div>
- <div class=" container mt-5 text-center">
+ <div class="table responsive">
+  <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            @foreach ( $data as $row )
+
+            @endforeach
+            <td>{{$row->name}}</td>
+
+@endforeach
+        </tr>
 
 
+    </tbody>
+
+
+
+
+
+  </table>
 
  </div>
 </body>
