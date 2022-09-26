@@ -34,7 +34,7 @@
 <button class="btn btn-primary ">Users</button>
 </form>
  </div>
- <div class="table responsive">
+ {{-- <div class="table responsive">
   <table>
     <thead>
         <tr>
@@ -45,24 +45,16 @@
     </thead>
     <tbody>
         <tr>
-            @foreach ( $data as $row )
-
+            @foreach ( )
+  <td>{{name}}</td>
+  <td>{{email}}</td>
+  <td>{{phone_number}}</td>
             @endforeach
-            <td>{{$row->name}}</td>
-
-@endforeach
         </tr>
-
-
     </tbody>
-
-
-
-
-
   </table>
 
- </div>
+ </div> --}}
 </body>
 
 </html>
