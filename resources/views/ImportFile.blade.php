@@ -48,6 +48,8 @@
 </body>
 </html>
 <script>
+    import axios from "axios";
+
 
     const list = [1,2,23,3]
     console.log(list);
@@ -62,4 +64,21 @@
     .catch((err) => {
         console.log(err)
     })
+
+//     const options = {
+//   method: 'GET',
+//   url: 'https://airbnb13.p.rapidapi.com/autocomplete',
+//   params: {query: 'paris'},
+//   headers: {
+//     'X-RapidAPI-Key': '68a17b08dbmshe68484fe4f7905bp16ece9jsn2069f40c2728',
+//     'X-RapidAPI-Host': 'airbnb13.p.rapidapi.com'
+//   }
+// };
+
+// axios.request(options).then(function (response) {
+// 	console.log(response.data);
+// }).catch(function (error) {
+// 	console.error(error);
+// });
+
 </script>
