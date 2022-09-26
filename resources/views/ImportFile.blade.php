@@ -34,27 +34,13 @@
 <button class="btn btn-primary ">Users</button>
 </form>
  </div>
- {{-- <div class="table responsive">
-  <table>
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Phone Number</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            @foreach ( )
-  <td>{{name}}</td>
-  <td>{{email}}</td>
-  <td>{{phone_number}}</td>
-            @endforeach
-        </tr>
-    </tbody>
-  </table>
+ <div>
 
- </div> --}}
+
+ </div>
 </body>
-
 </html>
+<script>
+
+
+</script>
