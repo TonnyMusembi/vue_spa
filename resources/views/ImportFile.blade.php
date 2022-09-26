@@ -49,7 +49,6 @@
 </html>
 <script>
 
-
     const list = [1,2,23,3]
     console.log(list);
 
@@ -63,7 +62,6 @@
     .catch((err) => {
         console.log(err)
     })
-
     const  year =  new Date();
      document.write("Year value :"+year.getFullYear());
 
