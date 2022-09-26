@@ -53,7 +53,10 @@
     console.log(list);
 
     const api = 'http://vue-spa.test/api/programs'
-    fetch ('api').then((response) => {
+    fetch ('api',
+   {
+    method:'get'
+   }).then((response) => {
         console.log(response)
     })
     .catch((err) => {

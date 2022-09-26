@@ -9,6 +9,7 @@ use App\Http\Controllers\UserController;
 
 use App\Http\Controllers\JointableController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\TransactionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -53,3 +54,5 @@ Route::get('join_table', [JointableController::class, 'index']);
 
 Route::resource('api/programs',  App\Http\Controllers\API\ProgramController::class);
 Route::get('api/orders',[OrderController::class]);
+
+Route::get('api/transactions',[TransactionController::class,'index']);
