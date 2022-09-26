@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\API\ProgramController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\CountryController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
@@ -56,3 +57,6 @@ Route::resource('api/programs',  App\Http\Controllers\API\ProgramController::cla
 Route::get('api/orders',[OrderController::class]);
 
 Route::get('api/transactions',[TransactionController::class,'index']);
+
+
+Route::resource('api/contacts', 'App\Http\Controllers\ContactController');
