@@ -96,7 +96,6 @@ class PhoneController extends Controller
      */
     public function destroy(Phone $phone)
     {
-        //
         return response()->json([
         'message' => "Phone deleted successfully!",
     ], 200);
