@@ -58,5 +58,4 @@ Route::get('api/orders',[OrderController::class]);
 
 Route::get('api/transactions',[TransactionController::class,'index']);
 
-
 Route::resource('api/contacts', 'App\Http\Controllers\ContactController');
