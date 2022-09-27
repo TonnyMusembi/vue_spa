@@ -80,7 +80,7 @@ class PhoneController extends Controller
      */
     public function update(Request $request, Phone $phone)
     {
-        //
+
         $phone->update($request->all());
     return response()->json([
         'message' => "Phone updated successfully!",
