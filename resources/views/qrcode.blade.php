@@ -29,7 +29,6 @@
                 {!! QrCode::size(150)->backgroundColor(255,90,0)->generate('https://techvblogs.com/blog/generate-qr-code-laravel-8') !!}
             </div>
         </div>
-
     </div>
 </body>
 </html>
