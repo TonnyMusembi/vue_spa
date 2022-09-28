@@ -15,6 +15,10 @@
             </form>
         </div>
     </div>
+<div class="container mt-5 text-center">
+    <form action="" method="" enctype="multipart/form-data">
+    </form>
+</div>
 
 </body>
 </html>
