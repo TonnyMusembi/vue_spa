@@ -11,9 +11,12 @@ use Illuminate\Http\Request;
     use App\Http\Resources\RatingResource;
 class RatingController extends Controller
 {
-    //
-    public function store(Request $request, Book $book)
-    {
+
+ public function index(){
+    return view('');
+
+    }
+    public function store(Request $request, Book $book){
       $rating = Rating::firstOrCreate(
         [
           'user_id' => $request->user()->id,
@@ -24,4 +27,8 @@ class RatingController extends Controller
 
       return new RatingResource($rating);
     }
+    public function create(){}
+
+
+
 }
