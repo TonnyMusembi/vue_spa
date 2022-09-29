@@ -32,4 +32,4 @@ Route::get('/users',[UserController::class,'index']);
 Route::get('books', [BookController::class]);
 Route::post('books/{book}/ratings', [RatingController::class]);
 Route::apiResource('phones', PhoneController::class);
-// Route::post('phones', PhoneController::class);
+//Route::post('phones', PhoneController::class);
