@@ -18,7 +18,8 @@ class QrCodeController extends Controller
 
     }
     public function create(){
-        
+        return  response()->json([]);
+
 
 
     }
