@@ -27,7 +27,12 @@ class RatingController extends Controller
 
       return new RatingResource($rating);
     }
-    public function create(){}
+    public function create(){
+        $books = Book::create([
+            'message' => 'created successfuly'
+
+        ]);
+    }
 
 
 
