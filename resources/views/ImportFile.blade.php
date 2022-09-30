@@ -71,4 +71,5 @@ let positive_array = numbers.filter(function(value) {
 
 console.log(positive_array);
 
+
 </script>
