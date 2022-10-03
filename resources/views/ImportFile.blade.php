@@ -37,7 +37,7 @@
     <div class="card-body">
         <div class="card-header">Upload file </div><br>
         <form action="" method="GET" enctype="multipart/form-data">
-            @csrf
+          @csrf
             <div class="custom-file text-left">
             <input type="file" name="file" class="custom-file-input" id="customFile">
             <label for="CustomFile" class="custom-file-label">Add file</label>
