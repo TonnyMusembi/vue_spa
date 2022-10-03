@@ -48,6 +48,7 @@
 </body>
 </html>
 <script>
+
     const api = 'http://vue-spa.test/api/programs'
     fetch ('api',
    {
