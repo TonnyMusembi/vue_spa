@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Api;
+use Illuminate\Support\Facades\Validator;
 
 use App\Http\Controllers\Controller;
 use App\Models\Phone;
@@ -29,6 +30,7 @@ class PhoneController extends Controller
      */
     public function create()
     {
+        return response()->json(['$']);
 
      }
 
@@ -40,13 +42,21 @@ class PhoneController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        $phone = Phone::create($request->all());
+       $validator = Validator::make($request->all(), [
+        'phone_id' => 'required',
+        'title'  => 'required',
+    ]);
+    if ($validator->fails()) {
+        return response()->json(['status' => 422, 'errors' => $validator->errors()]);
+    }
+    else {
 
-    return response()->json([
-        'message' => "Phone saved successfully!",
-        'phone' => $phone
-    ], 200);
+        Phone::create([
+            'phone_id' => $request->input('phone_id'),
+            'title' => $request->input('title'),
+        ]);
+    }
+    return response()->json(['req' => $request]);
     }
 
     /**
