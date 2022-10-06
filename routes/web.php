@@ -3,6 +3,7 @@
 use App\Http\Controllers\API\ProgramController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\CountryController;
+use App\Http\Controllers\CupController;
 use App\Http\Controllers\GameController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
@@ -61,3 +62,4 @@ Route::get('api/transactions',[TransactionController::class,'index']);
 
 Route::resource('api/contacts', 'App\Http\Controllers\ContactController');
 Route::get('api/games',[GameController::class]);
+Route::get('cups',[CupController::class,'index']);

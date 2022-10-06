@@ -14,8 +14,13 @@ class ContactController extends Controller
      */
     public function index()
     {
-    $contacts = Contact::all();
-     return view('contacts.index', compact('contacts'));
+    // $contacts = Contact::all();
+    //  return view('contacts.index', compact('contacts'));
+     $contacts = Contact::latest()->paginate(10);
+        return response()->json([
+            "status" => 200,
+            "data" => $contacts
+        ]);
 
     }
 
