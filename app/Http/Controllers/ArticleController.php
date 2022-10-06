@@ -15,8 +15,11 @@ class ArticleController extends Controller
     public function index()
     {
         //
-    return Article::all();
-
+     $articles = Article::latest()->paginate(10);
+        return response()->json([
+            "status" => 200,
+            "data" => $articles
+        ]);
     }
 
     /**
@@ -38,6 +41,8 @@ class ArticleController extends Controller
     public function store(Request $request)
     {
         //
+    return Article::create($request->all());
+
     }
 
     /**
@@ -83,5 +88,9 @@ class ArticleController extends Controller
     public function destroy($id)
     {
         //
+ $article = Article::findOrFail($id);
+        $article->delete();
+
+        return 204;
     }
 }
