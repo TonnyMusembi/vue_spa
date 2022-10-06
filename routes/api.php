@@ -7,9 +7,11 @@ use App\Http\Controllers\API\UserController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\RatingController;
 use App\Http\Controllers\Api\PhoneController;
+use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\CupController;
+use App\Http\Controllers\TeamsController;
 use App\Http\Controllers\TrendController;
 
 /*
@@ -45,3 +47,6 @@ Route::resource('cups', CupController::class);
 Route::resource('trends', TrendController::class);
 
 Route::resource('contacts', ContactController::class);
+Route::resource('teams',TeamsController::class);
+
+Route::resource('articles',ArticleController::class);
