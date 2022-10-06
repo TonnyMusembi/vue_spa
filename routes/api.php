@@ -9,6 +9,7 @@ use App\Http\Controllers\RatingController;
 use App\Http\Controllers\Api\PhoneController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CupController;
+use App\Http\Controllers\TrendController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,6 +39,6 @@ Route::resource('phones', PhoneController::class);
 
 Route::resource('blogs', BlogController::class);
 
-
 Route::resource('cups', CupController::class);
 
+Route::resource('trends', TrendController::class);
