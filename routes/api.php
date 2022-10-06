@@ -7,6 +7,9 @@ use App\Http\Controllers\API\UserController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\RatingController;
 use App\Http\Controllers\Api\PhoneController;
+use App\Http\Controllers\BlogController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -31,5 +34,7 @@ Route::get('/users',[UserController::class,'index']);
 
 Route::get('books', [BookController::class]);
 Route::post('books/{book}/ratings', [RatingController::class]);
-Route::apiResource('phones', PhoneController::class);
+Route::resource('phones', PhoneController::class);
 //Route::post('phones', PhoneController::class);
+
+Route::resource('blogs', BlogController::class);
