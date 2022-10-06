@@ -41,7 +41,6 @@ class CupController extends Controller
      */
     public function store(Request $request)
     {
-        //
         $request->validate([
             'cup_id' => 'required',
             'name' => 'required',
