@@ -48,7 +48,6 @@
 </body>
 </html>
 <script>
-// import axios from 'axios';
     const api = 'http://vue-spa.test/api/programs'
     fetch ('api',
    {
