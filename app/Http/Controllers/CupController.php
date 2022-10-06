@@ -62,7 +62,7 @@ class CupController extends Controller
      */
     public function show(Cup $cup)
     {
-        //
+    return  response()->json();
     }
 
     /**
