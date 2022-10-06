@@ -97,6 +97,8 @@ class CupController extends Controller
      */
     public function destroy(Cup $cup)
     {
-        //
+        return response()->json([
+        'message' => "Cup deleted successfully!",
+    ], 200);
     }
 }
