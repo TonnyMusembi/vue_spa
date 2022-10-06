@@ -11,7 +11,7 @@
 <body>
     <div class="container mt-5 text-center">
         <h2 class="mb-4">
-            Download and Import<a href="" target="_blank"></a>
+          Export Data<a href="" target="_blank"></a>
         </h2>
         <form action="{{ route('import') }}" method="POST" enctype="multipart/form-data">
             @csrf
