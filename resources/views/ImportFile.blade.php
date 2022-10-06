@@ -29,7 +29,7 @@
             <div class="cardbody">
                 <div class="cardheader">Users </div>
             </div>
-<form action="{{route('export-users')}}">
+<form action="{{route('blogs.index')}}">
 <button class="btn btn-primary ">Users Download</button>
 </form>
  </div>
@@ -48,7 +48,7 @@
 </body>
 </html>
 <script>
-    const api = 'http://vue-spa.test/api/programs'
+    const api = 'http://vue-spa.test/api/blogs'
     fetch ('api',
    {
     method:'get'
