@@ -48,16 +48,10 @@
 </body>
 </html>
 <script>
-    const api = 'http://vue-spa.test/api/blogs'
-    fetch ('api',
-   {
-    method:'get'
-   }).then((response) => {
-        console.log(response)
-    })
-    .catch((err) => {
-        console.log(err)
-    })
+   fetch('http://vue-spa.test/api/blogs')
+  .then((response) => response.json())
+  .then((data) => console.log(data.data));
+
     const  year =  new Date();
      document.write("Year value :"+year.getFullYear());
 
