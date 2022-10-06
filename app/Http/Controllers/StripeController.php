@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Stripe;
 use Illuminate\Http\Request;
-use App\Models\Article;
 
-class ArticleController extends Controller
+class StripeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,11 +15,6 @@ class ArticleController extends Controller
     public function index()
     {
         //
-     $articles = Article::latest()->paginate(10);
-        return response()->json([
-            "status" => 200,
-            "data" => $articles
-        ]);
     }
 
     /**
@@ -40,18 +35,16 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-
-    return Article::create($request->all());
-
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Stripe  $stripe
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Stripe $stripe)
     {
         //
     }
@@ -59,10 +52,10 @@ class ArticleController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Stripe  $stripe
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Stripe $stripe)
     {
         //
     }
@@ -71,10 +64,10 @@ class ArticleController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Models\Stripe  $stripe
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Stripe $stripe)
     {
         //
     }
@@ -82,15 +75,11 @@ class ArticleController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\Stripe  $stripe
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Stripe $stripe)
     {
         //
- $article = Article::findOrFail($id);
-        $article->delete();
-
-        return 204;
     }
 }

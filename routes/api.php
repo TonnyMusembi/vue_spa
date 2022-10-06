@@ -11,6 +11,7 @@ use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\CupController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\TeamsController;
 use App\Http\Controllers\TrendController;
 
@@ -50,3 +51,5 @@ Route::resource('contacts', ContactController::class);
 Route::resource('teams',TeamsController::class);
 
 Route::resource('articles',ArticleController::class);
+Route::resource('posts',PostController::class);
+
