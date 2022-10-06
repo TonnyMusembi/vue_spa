@@ -14,7 +14,8 @@ class SaleController extends Controller
      */
     public function index()
     {
-        //
+        return response()->json();
+
     }
 
     /**
@@ -36,6 +37,8 @@ class SaleController extends Controller
     public function store(Request $request)
     {
         //
+      return Sale::create($request->all());
+
     }
 
     /**
