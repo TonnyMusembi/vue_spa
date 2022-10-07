@@ -83,7 +83,7 @@ class CupController extends Controller
      */
     public function update(Request $request, Cup $cup)
     {
-        //
+    return  response()->json();
     }
 
     /**
