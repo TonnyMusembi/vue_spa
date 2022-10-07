@@ -96,6 +96,7 @@ class CupController extends Controller
     {
         return response()->json([
         'message' => "Cup deleted successfully!",
+        "data" => $cup
     ], 200);
     }
 }

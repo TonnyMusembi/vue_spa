@@ -13,7 +13,7 @@
           Export Data<a href="" target="_blank"></a>
         </h2>
         <form action="{{ route('import') }}" method="POST" enctype="multipart/form-data">
-            @csrf
+           @csrf
             <div class="form-group mb-4">
                 <div class="custom-file text-left">
                     <input type="file" name="file" class="custom-file-input" id="customFile">
