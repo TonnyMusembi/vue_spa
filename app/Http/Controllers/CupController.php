@@ -18,7 +18,7 @@ class CupController extends Controller
         return response()->json([
             "status" => 200,
             "data" => $cups
-        ]);
+      ]);
     }
 
     /**
