@@ -47,7 +47,7 @@
 </body>
 </html>
 <script>
-   fetch('http://vue-spa.test/api/blogs')
+   fetch('http://vue-spa.test/api/cups')
   .then((response) => response.json())
   .then((data) => console.log(data.data));
 

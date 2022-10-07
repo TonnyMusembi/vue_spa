@@ -14,9 +14,7 @@ class CupController extends Controller
      */
     public function index()
     {
-        //
-
-         $cups = Cup::latest()->paginate(10);
+        $cups = Cup::latest()->paginate(10);
         return response()->json([
             "status" => 200,
             "data" => $cups
@@ -49,7 +47,7 @@ class CupController extends Controller
 
         $cup = Cup::create($request->all());
         return [
-            "status" => 1,
+            "status" => 200,
             "data" => $cup
         ];
     }
