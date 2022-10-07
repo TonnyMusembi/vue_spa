@@ -14,8 +14,7 @@ class RewardController extends Controller
      */
     public function index()
     {
-        //
-        $rewards= Reward::paginate(10);
+        $rewards= Reward::latest()->paginate(10);
         return response()->json($rewards);
     }
 
@@ -35,9 +34,9 @@ class RewardController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        //
+    public function store(Request $request){
+
+
     }
 
     /**

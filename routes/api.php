@@ -13,6 +13,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\CupController;
 use App\Http\Controllers\DataController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\RewardController;
 use App\Http\Controllers\SaleController;
 use App\Http\Controllers\TeamsController;
 use App\Http\Controllers\TrendController;
@@ -58,3 +59,6 @@ Route::resource('posts',PostController::class);
 Route::resource('sales',SaleController::class);
 
 Route::resource('data',DataController::class);
+
+Route::resource('rewards',RewardController::class);
+
