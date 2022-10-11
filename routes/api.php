@@ -10,6 +10,7 @@ use App\Http\Controllers\Api\PhoneController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\CrmController;
 use App\Http\Controllers\CupController;
 use App\Http\Controllers\DataController;
 use App\Http\Controllers\PostController;
@@ -62,3 +63,4 @@ Route::resource('data',DataController::class);
 
 Route::resource('rewards',RewardController::class);
 
+Route::resource('blogins',CrmController::class);
