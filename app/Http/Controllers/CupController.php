@@ -44,7 +44,6 @@ class CupController extends Controller
             'name' => 'required',
             'country'=> 'required'
         ]);
-
         $cup = Cup::create($request->all());
         return [
             "status" => 200,
@@ -55,7 +54,7 @@ class CupController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Blog  $blog
+     * @param  \App\Models\Cup  $cups
      * @return \Illuminate\Http\Response
      */
     public function show(Cup $cup)
@@ -78,7 +77,7 @@ class CupController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Blog  $blog
+     * @param  \App\Models\Cup  $cup
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Cup $cup)
