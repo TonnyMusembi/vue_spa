@@ -63,4 +63,4 @@ Route::resource('data',DataController::class);
 
 Route::resource('rewards',RewardController::class);
 
-Route::resource('blogins',CrmController::class);
+Route::resource('crms',CrmController::class);
