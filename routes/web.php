@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\API\ProgramController;
+use App\Http\Controllers\Api\ProjectController;
+use App\Http\Controllers\Api\StudentController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\CountryController;
 use App\Http\Controllers\CupController;
@@ -63,3 +65,14 @@ Route::get('api/transactions',[TransactionController::class,'index']);
 Route::resource('api/contacts', 'App\Http\Controllers\ContactController');
 Route::get('api/games',[GameController::class]);
 Route::get('cups',[CupController::class,'index']);
+
+Route::post("register", [StudentController::class, "register"]);
+Route::post("login", [StudentController::class, "login"]);
+Route::group(["middleware" => ["auth:sanctum"]], function(){
+Route::get("profile", [ProjectController::class, "profile"]);
+    Route::get("logout", [StudentController::class, "logout"]);
+Route::post("create-project", [ProjectController::class, "createProject"]);
+    Route::get("list-project", [ProjectController::class, "listProject"]);
+    Route::get("single-project/{id}", [ProjectController::class, "singleProject"]);
+    Route::delete("delete-project/{id}", [ProjectController::class, "deleteProject"]);
+});

@@ -20,6 +20,8 @@ use App\Http\Controllers\TeamsController;
 use App\Http\Controllers\TrendController;
 use Symfony\Component\HttpKernel\DataCollector\DataCollector;
 
+use App\Http\Controllers\Api\ApiController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -67,3 +69,9 @@ Route::resource('rewards',RewardController::class);
 Route::resource('crms',CrmController::class);
 
 // Route::resource('data',DataCollector::class);
+
+Route::get("list-students", [ApiController::class, "listStudents"]);
+Route::get("single-student/{id}", [ApiController::class, "getSingleStudent"]);
+Route::post("add-student", [ApiController::class, "CreateStudent"]);
+Route::put("update-student/{id}", [ApiController::class, "updateStudent"]);
+Route::delete("delete-student/{id}", [ApiController::class, "deleteStudent"]);
