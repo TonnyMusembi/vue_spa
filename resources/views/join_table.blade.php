@@ -8,7 +8,7 @@
           <div class="container mt-5 text-center">
             <div class="cardbody">
             </div>
-<form action="{{route('import-view')}}">
+<form action="">
 <button class="btn btn-primary ">Users</button>
 </form>
         </div>
@@ -49,4 +49,10 @@
     </body>
 </html>
 <script>
+
+    const api = 'http://vue-spa.test/api/cups'
+
+    fetch(api).then((response) => response.json())
+  .then((data) => console.log(data.data));
+
 </script>
