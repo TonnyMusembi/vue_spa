@@ -28,7 +28,7 @@
             <div class="cardbody">
                 <div class="cardheader">Users </div>
             </div>
-<form action="{{route('blogs.index')}}">
+<form action="{{route()}}">
 <button class="btn btn-primary ">Users Download</button>
 </form>
  </div>
