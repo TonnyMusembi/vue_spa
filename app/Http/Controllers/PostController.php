@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use Illuminate\Http\Request;
+// use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 
 class PostController extends Controller
 {
@@ -72,10 +74,10 @@ class PostController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Post $post)
-    {
-        //
-    }
+    // public function update(Request $request, Post $post)
+    // {
+    //     //
+    // }
 
     /**
      * Remove the specified resource from storage.
@@ -89,5 +91,17 @@ class PostController extends Controller
             'message' => "deleted successfully"
 
         ],200);
+    }
+
+    public function update()
+    {
+        $response = Http::put('https://jsonplaceholder.typicode.com/posts/1', [
+                    'title' => 'This is test from ItSolutionStuff.com',
+                    'body' => 'This is test from ItSolutionStuff.com as body',
+                ]);
+
+        $jsonData = $response->json();
+
+        dd($jsonData);
     }
 }
