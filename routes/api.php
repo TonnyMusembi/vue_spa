@@ -40,9 +40,9 @@ Route::get('/qrcode', [QrCodeController::class, 'index']);
 
 Route::get('/users',[UserController::class,'index']);
 
-
-Route::get('books', [BookController::class]);
-Route::post('books/{book}/ratings', [RatingController::class]);
+Route::resource('books',BookController::class);
+//Route::get('books', [BookController::class]);
+//Route::post('books/{book}/ratings', [RatingController::class]);
 Route::resource('phones', PhoneController::class);
 //Route::post('phones', PhoneController::class);
 
