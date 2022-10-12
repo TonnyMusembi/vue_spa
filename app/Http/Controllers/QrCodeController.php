@@ -21,7 +21,10 @@ class QrCodeController extends Controller
         return  response()->json([]);
 
     }
-    public function update(){
-        
-    }
+   public function destroy($id){
+    return response()->json([
+        'message' => "successfully deleted"
+    ]);
+
+   }
 }
