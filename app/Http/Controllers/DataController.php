@@ -14,7 +14,12 @@ class DataController extends Controller
      */
     public function index()
     {
-    
+        $data= Data::all();
+        return response()->json([
+            "status" => 200,
+            "data" => $data
+      ]);
+
     }
 
     /**
@@ -80,6 +85,10 @@ class DataController extends Controller
      */
     public function destroy(Data $data)
     {
-        //
+        return response()->json(
+            // 'message' => "Record deleted successfully"
+        );
+
+
     }
 }

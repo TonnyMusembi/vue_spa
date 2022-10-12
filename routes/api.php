@@ -18,6 +18,7 @@ use App\Http\Controllers\RewardController;
 use App\Http\Controllers\SaleController;
 use App\Http\Controllers\TeamsController;
 use App\Http\Controllers\TrendController;
+use Symfony\Component\HttpKernel\DataCollector\DataCollector;
 
 /*
 |--------------------------------------------------------------------------
@@ -64,3 +65,5 @@ Route::resource('data',DataController::class);
 Route::resource('rewards',RewardController::class);
 
 Route::resource('crms',CrmController::class);
+
+// Route::resource('data',DataCollector::class);
