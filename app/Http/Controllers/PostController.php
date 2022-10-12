@@ -14,12 +14,12 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         //
-       $posts = Post:: orderBy("id", "DESC")->get();
+       $posts = Post:: orderBy("id", "DESC")->latest();
 
-      // dd($posts);
+    //   dd($posts);
      return response()->json([
       'posts' => $posts
    ],200);
