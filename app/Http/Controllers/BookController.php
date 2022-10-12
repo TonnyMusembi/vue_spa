@@ -9,9 +9,6 @@ use App\Http\Resources\BookResource;
 
 class BookController extends Controller
 {
-
-// ...
-
     public function index()
     {
      // return BookResource::collection(Book::with('ratings')->paginate(10));
@@ -25,13 +22,13 @@ class BookController extends Controller
 
     public function store(Request $request)
     {
-    //   $book = Book::create([
-    //     'user_id' => $request->user()->id,
-    //     'title' => $request->title,
-    //     'description' => $request->description,
-    //   ]);
+      $book = Book::create([
+        'user_id' => $request->user()->id,
+        'title' => $request->title,
+        'description' => $request->description,
+      ]);
 
-    //   return new BookResource($book);
+      return new BookResource($book);
     }
 
     public function show(Book $book)
