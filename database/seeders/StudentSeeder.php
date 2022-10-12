@@ -15,7 +15,7 @@ class StudentSeeder extends Seeder
     public function run()
     {
 
-         $faker = \Faker\Factory::create();
+        $faker = \Faker\Factory::create();
       DB::table("students")->insert([
             "name" => $faker->name(),
             "email" => $faker->safeEmail,
