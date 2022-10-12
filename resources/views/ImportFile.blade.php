@@ -50,10 +50,6 @@
    fetch('http://vue-spa.test/api/cups')
   .then((response) => response.json())
   .then((data) => console.log(data.data));
-
-    const  year =  new Date();
-     document.write("Year value :"+year.getFullYear());
-
      const timeNow = new Date ();
      console.log(timeNow);
 
