@@ -17,7 +17,9 @@ class PostController extends Controller
     public function index()
     {
         //
-       $posts = Post::all();
+       $posts = Post:: orderBy("id", "DESC")->get();
+
+      // dd($posts);
      return response()->json([
       'posts' => $posts
    ],200);
@@ -88,16 +90,14 @@ class PostController extends Controller
     public function destroy(Post $post)
     {
         return response()->json([
-            'message' => "deleted successfully"
-
-        ],200);
+            'message' => "deleted successfully"  ],200);
     }
 
     public function update()
     {
         $response = Http::put('https://jsonplaceholder.typicode.com/posts/1', [
-                    'title' => 'This is test from ItSolutionStuff.com',
-                    'body' => 'This is test from ItSolutionStuff.com as body',
+                    'title' => 'Test',
+                    'body' => 'test api',
                 ]);
 
         $jsonData = $response->json();
