@@ -22,6 +22,10 @@ use Symfony\Component\HttpKernel\DataCollector\DataCollector;
 
 use App\Http\Controllers\Api\ApiController;
 
+//use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\AuthController;
+
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -75,3 +79,7 @@ Route::get("single-student/{id}", [ApiController::class, "getSingleStudent"]);
 Route::post("add-student", [ApiController::class, "CreateStudent"]);
 Route::put("update-student/{id}", [ApiController::class, "updateStudent"]);
 Route::delete("delete-student/{id}", [ApiController::class, "deleteStudent"]);
+
+//Route::post("/register",[Controllers\Api\AuthController::class,'register']);
+//Route::post("/login",[Controllers\Api\AuthController::class,'login']);
+Route::post('/register', [AuthController::class, 'register']);
