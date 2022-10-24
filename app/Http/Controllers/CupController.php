@@ -26,9 +26,12 @@ class CupController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-     return response()->json();
+    public function create(){
+     return response()->json([
+        'message'=> 'created successfully',
+        'status' => 'success'
+
+     ]);
     }
 
     /**
