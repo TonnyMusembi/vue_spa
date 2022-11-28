@@ -41,9 +41,12 @@ class JointableController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request,[
+            'table_id' =>'required',
+            'name'=>'required'
 
         ]);
 
+        
         return response()->json($request);
     }
 
