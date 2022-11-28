@@ -37,6 +37,9 @@ class SaleController extends Controller
     public function store(Request $request)
     {
         //
+        $this->validate($request,[
+            
+        ]);
       return Sale::create($request->all());
 
     }

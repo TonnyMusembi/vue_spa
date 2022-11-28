@@ -48,8 +48,9 @@ class BlogController extends Controller
 
         $blog = Blog::create($request->all());
         return [
-            "status" => 1,
-            "data" => $blog
+            'message' => 'created successfully',
+            "status" => 200
+            // "data" => $blog
         ];
     }
 
