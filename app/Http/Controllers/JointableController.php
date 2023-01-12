@@ -45,8 +45,9 @@ class JointableController extends Controller
             'name'=>'required'
 
         ]);
-
         
+
+
         return response()->json($request);
     }
 
