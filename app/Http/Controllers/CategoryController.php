@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class CategoryController extends Controller
 {
@@ -16,6 +17,9 @@ class CategoryController extends Controller
 
         $categories = Category::all(['id','title','description']);
         return response()->json($categories);
+
+        Log::debug('This is a debug log.');
+
     }
 
     /**
