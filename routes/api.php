@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\QrCodeController;
 use App\Http\Controllers\API\UserController;
 use App\Http\Controllers\BookController;
-use App\Http\Controllers\RatingController;
+// use App\Http\Controllers\BottleController;
 use App\Http\Controllers\Api\PhoneController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\BlogController;
@@ -83,3 +83,7 @@ Route::delete("delete-student/{id}", [ApiController::class, "deleteStudent"]);
 //Route::post("/register",[Controllers\Api\AuthController::class,'register']);
 //Route::post("/login",[Controllers\Api\AuthController::class,'login']);
 Route::post('/register', [AuthController::class, 'register']);
+
+// Route::middleware('auth:api')->group( function () {
+//     Route::resource('bottles', [BottleController::class,"bottles"]);
+// });
