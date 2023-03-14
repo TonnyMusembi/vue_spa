@@ -14,7 +14,8 @@ class SaleController extends Controller
      */
     public function index()
     {
-        return response()->json();
+        $sales=Sale::latest();
+        return response()->json($sales);
 
     }
 
@@ -38,7 +39,7 @@ class SaleController extends Controller
     {
         //
         $this->validate($request,[
-            
+
         ]);
       return Sale::create($request->all());
 
