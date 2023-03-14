@@ -14,7 +14,7 @@ class EntryController extends Controller
      */
     public function index()
     {
-        //
+        
         return view('entries');
     }
 
@@ -37,7 +37,7 @@ class EntryController extends Controller
     public function store(Request $request)
     {
         //
-        
+
     }
 
     /**

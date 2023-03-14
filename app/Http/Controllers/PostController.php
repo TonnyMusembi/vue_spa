@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use Illuminate\Http\Request;
+// use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 
 class PostController extends Controller
 {
@@ -12,10 +14,12 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         //
-       $posts = Post::all();
+       $posts = Post:: orderBy("id", "DESC")->latest();
+
+    //   dd($posts);
      return response()->json([
       'posts' => $posts
    ],200);
@@ -72,10 +76,10 @@ class PostController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Post $post)
-    {
-        //
-    }
+    // public function update(Request $request, Post $post)
+    // {
+    //     //
+    // }
 
     /**
      * Remove the specified resource from storage.
@@ -85,6 +89,19 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        //
+        return response()->json([
+            'message' => "deleted successfully"  ],200);
+    }
+
+    public function update()
+    {
+        $response = Http::put('https://jsonplaceholder.typicode.com/posts/1', [
+                    'title' => 'Test',
+                    'body' => 'test api',
+                ]);
+
+        $jsonData = $response->json();
+
+        dd($jsonData);
     }
 }

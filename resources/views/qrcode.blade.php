@@ -9,9 +9,7 @@
 </head>
 
 <body>
-
     <div class="container mt-4">
-
         <div class="card">
             <div class="card-header">
                 <h2>Simple QR Code</h2>
@@ -29,7 +27,8 @@
                 {!! QrCode::size(150)->backgroundColor(255,90,0)->generate('https://techvblogs.com/blog/generate-qr-code-laravel-8') !!}
             </div>
         </div>
-
     </div>
 </body>
 </html>
+<script>
+</script>

@@ -18,8 +18,13 @@ class QrCodeController extends Controller
 
     }
     public function create(){
-        
-
+        return  response()->json([]);
 
     }
+   public function destroy($id){
+    return response()->json([
+        'message' => "successfully deleted"
+    ]);
+
+   }
 }

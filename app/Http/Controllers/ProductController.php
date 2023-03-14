@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\Validator;
 
 use App\Models\Product;
 use App\Models\Program;
@@ -13,9 +14,7 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-
+    public function index(){
         $products = Product::all('id','name','status');
         return response()->json($products);
     }
@@ -37,11 +36,14 @@ class ProductController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request){
-        $program = Program::create([
 
+
+        Product::create([
+            'name' => $request->input('name'),
+            'status' => $request->input('status'),
         ]);
-        return response()->json($program);
-
+    }
+    return response()->json(['req' => $request]);
     }
 
     /**
@@ -52,7 +54,7 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        //
+    return  response()->json([]);
     }
 
     /**

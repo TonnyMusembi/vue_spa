@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 use App\Models\Country;
 
@@ -39,7 +40,14 @@ class JointableController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validator = Validator::make($request,[
+            'table_id' =>'required',
+            'name'=>'required'
+
+        ]);
+        
+
+
         return response()->json($request);
     }
 
@@ -73,8 +81,8 @@ class JointableController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
-    {
-        //
+     {
+      return response()->json(['']);
     }
 
     /**

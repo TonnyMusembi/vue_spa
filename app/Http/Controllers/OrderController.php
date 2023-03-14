@@ -14,9 +14,7 @@ class OrderController extends Controller
      */
     public function index()
     {
-        $order = Order::all();
-        return  response()->json($order);
-    }
+
 
     /**
      * Show the form for creating a new resource.

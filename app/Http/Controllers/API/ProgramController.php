@@ -10,7 +10,7 @@ use App\Http\Resources\ProgramResource;
 use Illuminate\Support\Facades\Validator;
 
 class ProgramController extends Controller
-{
+ {
     /**
      * Display a listing of the resource.
      *
