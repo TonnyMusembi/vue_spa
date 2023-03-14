@@ -16,7 +16,6 @@ class PostController extends Controller
      */
     public function index(Request $request)
     {
-        //
        $posts = Post:: orderBy("id", "DESC")->latest();
 
     //   dd($posts);
@@ -44,6 +43,7 @@ class PostController extends Controller
     public function store(Request $request)
     {
         //
+
        return response()->json('$data');
     }
 

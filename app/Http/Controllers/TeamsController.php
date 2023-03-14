@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Teams;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
+
 
 class TeamsController extends Controller
 {
@@ -15,6 +17,11 @@ class TeamsController extends Controller
     public function index()
     {
         //
+        $teams=Teams::all();
+        return response()->json([
+            'data' =>$teams,
+            'status' => 200
+        ],200);
     }
 
     /**
@@ -35,7 +42,12 @@ class TeamsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $validator = Validator::make($request,[
+            'id' =>'required',
+            'name'=>'required'
+        ]);
+        return response()->json($request);
     }
 
     /**
